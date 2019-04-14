@@ -56,7 +56,7 @@ class LRUCache:
 cache = LRUCache(2)
 
 
-@app.route("/api/v1/get/<key>", methods=['GET'])
+@app.route("/api/v1/get/<int:key>", methods=['GET'])
 def cache_get(key):
     """
     GET request for key in cache.
@@ -71,7 +71,7 @@ def cache_get(key):
         return jsonify({'key': key, 'value': value})
 
 
-@app.route("/api/v1/put/<key>", methods=['PUT'])
+@app.route("/api/v1/put/<int:key>", methods=['PUT'])
 def cache_put(key):
     """
     PUT request for adding/updating key in cache. Supply -d value={POSITIVE_INT}
