@@ -3,7 +3,6 @@ import collections
 from flask import Flask, Response, abort, jsonify, request
 
 app = Flask(__name__)
-app.run(host='0.0.0.0', port=80)
 
 
 class LRUCache:
@@ -88,3 +87,7 @@ def cache_put(key):
         abort(400, "Arg `value` must be supplied!")
     except ValueError:
         abort(400, "Arg `value` must be a positive integer!")
+
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=80)
