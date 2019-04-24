@@ -12,7 +12,6 @@ class LRUCache:
 
         :param capacity: Capacity of the LRU cache
         """
-        # self._cache = dict()
         self._cache = collections.OrderedDict()
 
         if type(capacity) is not int:
